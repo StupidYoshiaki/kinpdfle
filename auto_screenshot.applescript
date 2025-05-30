@@ -59,7 +59,7 @@ on runMainScreenshotLogic()
     end if
 
     -- 範囲指定の確認 (保存先に関する説明を更新)
-    display dialog "範囲指定は済んでいますか？" & return & "" & return & "範囲指定: 点線エリアを調整してください。" & return & "保存先: スクリプト起動時に指定/選択したフォルダに保存されます。" & return & "最後に右下のパネルをxで閉じるか「取り込む」を押します。" buttons {"はい", "設定する", "終了"} default button "はい" with title "選択範囲設定確認 Step0"
+    display dialog "範囲指定は済んでいますか？" & return & "" & return & "範囲指定: 点線エリアを調整してください。" & return & "保存先: スクリプト起動時に指定/選択したフォルダに保存されます。" & return & "最後に右下のパネルをxで閉じてください。" buttons {"はい", "設定する", "終了"} default button "はい" with title "選択範囲設定確認 Step0"
     set confirmPattern to button returned of result
     if confirmPattern = "終了" then error number -128
     if confirmPattern = "設定する" then openScreenshotTool()
